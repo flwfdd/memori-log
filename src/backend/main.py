@@ -183,7 +183,7 @@ def login():
     args=request.values
     user=args['user']
     password=args['user']+args['password']
-    if password=='flw0511' or password=='xy0204':
+    if password=='' or password=='':
         res=make_response({"status":"ok"})
         res.set_cookie("user", "flw", max_age=30*24*3600)
         res.set_cookie("key", password, max_age=30*24*3600)
